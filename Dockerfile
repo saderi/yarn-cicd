@@ -13,7 +13,7 @@ RUN curl -sL https://deb.nodesource.com/setup_18.x | bash - \
     && curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
     && echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list \
     && apt-get update -yqq \
-    && apt-get install -yqq nodejs yarn
+    && apt-get install -yqq nodejs yarn libimage-exiftool-perl
 
 RUN mkdir -p /root/.fonts
 COPY fonts/*.ttf /root/.fonts/
